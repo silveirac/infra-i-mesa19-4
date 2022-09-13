@@ -1,0 +1,22 @@
+#docker-compose me ajuda a criar o container e construir a imagem
+#versão API do docker-compose que vamos usar
+version: '3.8'
+#começa a criação dos serviços
+services:
+  #nome do meu serviço ---- vc pode alterar colocar o seu
+  todoservices:
+    #estou pedindo para fazer: docker image build -t nidio/imagetodo .
+    build: .
+    #nomeando a imagem
+    image: nidio/imagetodo
+    #nome do meu container
+    container_name: todo_container2
+    # liberação e redirecionamento de portas entrada pela porta 81 e vai para 80 do container
+    ports:
+      - "81:80"
+
+
+#docker-compose up -d
+#start stop 
+# down para excluir
+  
